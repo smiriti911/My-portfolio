@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import ComputerCanvas from "./canvas/CanvasScene";
 import { TypingAnimation } from '@/components/magicui/typing-animation';
 import useResponsive from "../hooks/useResponsive";
+
 const redRose = Red_Rose({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -18,27 +19,42 @@ const Hero = () => {
   const canvasRef = useRef(null);
   const { isMobile } = useResponsive();
 
-  useGSAP(() => {
-    const tl = gsap.timeline();
+useGSAP(() => {
+  const tl = gsap.timeline();
 
-    tl.fromTo(
-      line1Ref.current,
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.5 }
-    )
+  tl.fromTo(
+    line1Ref.current,
+    { opacity: 0, y: 20 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "back.out(2)",  // ultra buttery
+    }
+  )
     .fromTo(
       line2Ref.current,
-      { opacity: 0, y: 0 },
-      { opacity: 1, y: 0, duration: 1 },
-      "+=0.2"
+      { opacity: 0, y: 5 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "back.out(2)",  // matches buttery feel
+      },
+      "+=0.25"
     )
     .fromTo(
       canvasRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 1, ease:'none' },
-      "+=0.2"
+      {
+        opacity: 1,
+        duration: 1,
+        ease: "back.out(2)",  // soft and calm
+      },
+      "+=0.4"
     );
-  }, []);
+}, []);
+
 
   return (
     <section
@@ -54,8 +70,8 @@ const Hero = () => {
         </p>
 
         <div ref={line2Ref} className="opacity-0">
-          <TypingAnimation 
-            className={`text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-700 text-xl sm:text-2xl font-semibold tracking-wide text-center ${redRose.className}` }
+          <TypingAnimation
+            className={`text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-700 text-xl sm:text-2xl font-semibold tracking-wide text-center ${redRose.className}`}
           >
             Designing intuitive experiences
           </TypingAnimation>

@@ -68,7 +68,7 @@ const Computer = () => {
 
 
   const scale = isMobile ? [1.5, 1.5, 1.5]: [1.92, 1.92, 1.92];
-  const position = isMobile ? [-0.5, -2, -0.5]: [-0.8, -3.2, -0.9];
+  const position = isMobile ? [-0.5, -2.5, -0.5]: [-0.8, -3.2, -0.9];
 
   useEffect(() => {
   if (actions) {
@@ -122,7 +122,7 @@ const Computer = () => {
       />
        <spotLight position={[5, 10, 5]} angle={0.3} intensity={5} castShadow />
 
-       <mesh position={isMobile?[-1.2, -2, -1]:[-1.75, -3.2, -1.55]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+       <mesh position={isMobile?[-1.2, -2.5, -1]:[-1.75, -3.2, -1.55]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
         <circleGeometry args={isMobile?[2,64]:[2.5, 64]} />
         <meshStandardMaterial 
           color="#2b2529" // ✅ Set the color of the circle
