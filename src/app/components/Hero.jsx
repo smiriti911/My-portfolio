@@ -1,73 +1,44 @@
 "use client";
 
 import React, { useRef } from "react";
-import { Red_Rose } from "next/font/google";
-import { TypingAnimation } from "@/components/magicui/typing-animation";
+import { Red_Rose } from 'next/font/google';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import CanvasScene from "./canvas/CanvasScene";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
-
-
+import ComputerCanvas from "./canvas/CanvasScene";
+import { TypingAnimation } from '@/components/magicui/typing-animation';
+import useResponsive from "../hooks/useResponsive";
 const redRose = Red_Rose({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
 const Hero = () => {
-  const textRef = useRef(null);
-  const typingRef = useRef(null);
-  const canvasRef = useRef(null); // 🎯 Add canvas wrapper ref
+  const line1Ref = useRef(null);
+  const line2Ref = useRef(null);
+  const canvasRef = useRef(null);
+  const { isMobile } = useResponsive();
 
+  useGSAP(() => {
+    const tl = gsap.timeline();
 
- useGSAP(() => {
-  const introTimeline = gsap.timeline();
-  const scrollTimeline = gsap.timeline({ paused: true }); // initially paused
-
-  // 1. Set initial states
-  gsap.set([textRef.current, typingRef.current, canvasRef.current], {
-    opacity: 0,
-  });
-
-  // 2. Define intro animation
-  introTimeline
-    .to(textRef.current, {
-      scale: 1,
-      opacity: 1,
-      delay: 1,
-      ease: "power1.out",
-    })
-    .to(typingRef.current, {
-      scale: 1,
-      opacity: 1,
-      delay: 0.5,
-      ease: "power1.out",
-    })
-    .to(canvasRef.current, {
-      opacity: 1,
-      duration: 0.5,
-      ease: "power4.in",
-    })
-    .add(() => {
-      // 3. Define scroll-based animation after intro finishes
-      scrollTimeline.scrollTrigger = ScrollTrigger.create({
-        trigger: "#hero",
-        start: "top top",
-        endTrigger: "#bento",
-        end: "top 85%",
-        scrub: true,
-        animation: scrollTimeline,
-      });
-
-      scrollTimeline.to(canvasRef.current, {
-        opacity: 0,
-        ease: "power4.in",
-      });
-    });
-}, []);
+    tl.fromTo(
+      line1Ref.current,
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.5 }
+    )
+    .fromTo(
+      line2Ref.current,
+      { opacity: 0, y: 0 },
+      { opacity: 1, y: 0, duration: 1 },
+      "+=0.2"
+    )
+    .fromTo(
+      canvasRef.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 1, ease:'none' },
+      "+=0.2"
+    );
+  }, []);
 
   return (
     <section
@@ -76,15 +47,15 @@ const Hero = () => {
     >
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-25 sm:px-10 px-5 gap-3">
         <p
-          ref={textRef}
+          ref={line1Ref}
           className={`opacity-0 text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-500 text-3xl sm:text-4xl font-semibold tracking-wide text-center ${redRose.className}`}
         >
           Hi, I am Smiriti
         </p>
 
-        <div ref={typingRef}>
-          <TypingAnimation
-            className={`text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-700 text-xl sm:text-2xl font-semibold tracking-wide text-center ${redRose.className}`}
+        <div ref={line2Ref} className="opacity-0">
+          <TypingAnimation 
+            className={`text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-700 text-xl sm:text-2xl font-semibold tracking-wide text-center ${redRose.className}` }
           >
             Designing intuitive experiences
           </TypingAnimation>
@@ -95,7 +66,7 @@ const Hero = () => {
         ref={canvasRef}
         className="w-full h-full absolute inset-0 opacity-0 transition-opacity duration-1000 sm:z-[0] z-[-1]"
       >
-        <CanvasScene/>
+        <ComputerCanvas />
       </div>
     </section>
   );
