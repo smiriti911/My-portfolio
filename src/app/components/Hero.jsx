@@ -24,12 +24,12 @@ useGSAP(() => {
 
   tl.fromTo(
     line1Ref.current,
-    { opacity: 0, y: 20 },
+    { opacity: 0, y: 10 },
     {
       opacity: 1,
       y: 0,
       duration: 1,
-      ease: "back.out(2)",  // ultra buttery
+      ease: "power1.out",  // ultra buttery
     }
   )
     .fromTo(
@@ -39,7 +39,7 @@ useGSAP(() => {
         opacity: 1,
         y: 0,
         duration: 1,
-        ease: "back.out(2)",  // matches buttery feel
+        ease: "power1.out",  // matches buttery feel
       },
       "+=0.25"
     )
@@ -49,7 +49,7 @@ useGSAP(() => {
       {
         opacity: 1,
         duration: 1,
-        ease: "back.out(2)",  // soft and calm
+        ease: "power4.in",  // soft and calm
       },
       "+=0.4"
     );
@@ -70,11 +70,11 @@ useGSAP(() => {
         </p>
 
         <div ref={line2Ref} className="opacity-0">
-          <TypingAnimation
+          <p
             className={`text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-700 text-xl sm:text-2xl font-semibold tracking-wide text-center ${redRose.className}`}
           >
             Designing intuitive experiences
-          </TypingAnimation>
+          </p>
         </div>
       </div>
 
