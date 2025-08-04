@@ -10,12 +10,12 @@ gsap.registerPlugin(useGSAP);
 
 // Preload assets
 useGLTF.preload("./arrow.glb");
-useTexture.preload("/images.jpeg");
+useTexture.preload("/arrow2.png");
 
 const Arrow = () => {
   const arrowRef = useRef();
   const { scene } = useGLTF("./arrow.glb");
-  const texture = useTexture("/images.jpeg");
+  const texture = useTexture("/arrow2.png");
   const { isMobile } = useResponsive();
 
   // Memoized responsive config
@@ -51,7 +51,7 @@ const Arrow = () => {
         z: position[2],
         ease: "power4.out",
         duration: 0.5,
-        delay: 3.5,
+        delay: 2,
       }
     );
 

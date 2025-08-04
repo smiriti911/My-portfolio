@@ -24,22 +24,22 @@ useGSAP(() => {
 
   tl.fromTo(
     line1Ref.current,
-    { opacity: 0, y: 10 },
+    { opacity: 0, y: 0 },
     {
       opacity: 1,
       y: 0,
-      duration: 1,
-      ease: "power1.out",  // ultra buttery
+      duration: 0.5,
+      ease: "power4.out",  // ultra buttery
     }
   )
     .fromTo(
       line2Ref.current,
-      { opacity: 0, y: 5 },
+      { opacity: 0, y: 0 },
       {
         opacity: 1,
         y: 0,
-        duration: 1,
-        ease: "power1.out",  // matches buttery feel
+        duration: 0.5,
+        ease: "power4.out",  // matches buttery feel
       },
       "+=0.25"
     )
@@ -51,7 +51,7 @@ useGSAP(() => {
         duration: 1,
         ease: "power4.in",  // soft and calm
       },
-      "+=0.4"
+      "+=0.25"
     );
 }, []);
 

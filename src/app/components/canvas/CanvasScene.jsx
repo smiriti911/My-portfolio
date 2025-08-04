@@ -127,7 +127,7 @@ const Computer = () => {
         <meshStandardMaterial 
           color="#2b2529" // ✅ Set the color of the circle
           transparent={true}  // ✅ Enable transparency
-          opacity={0.2}       // ✅ Set opacity (0 = invisible, 1 = solid)
+          opacity={0.3}       // ✅ Set opacity (0 = invisible, 1 = solid)
           depthWrite={true}   // ✅ Ensure proper rendering of shadows
         />
       </mesh>

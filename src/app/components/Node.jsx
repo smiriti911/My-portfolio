@@ -37,7 +37,7 @@ const Nodejs = () => {
       z: finalPosition[2],
       duration: 3,
       ease: `elastic.out(${elastic[0]}, ${elastic[1]})`,
-      delay: 4,
+      delay: 3.5,
     });
 
     // Infinite rotation around Z axis

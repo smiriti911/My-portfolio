@@ -48,7 +48,7 @@ const BentoGrid = () => {
             <div className="flex justify-between items-start w-full">
               <div className="flex gap-4 items-center">
                 <Image
-                  src="/smiriti.jpg"
+                  src="/avatar.png"
                   width={72}
                   height={72}
                   alt="Smiriti"

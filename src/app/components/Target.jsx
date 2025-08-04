@@ -39,7 +39,7 @@ const Target = (props) => {
       {
         ...finalPosition,
         duration: 0.5,
-        delay: 3.5,
+        delay: 3,
         ease: "power4.out",
         onComplete: () => {
           // Continuous yoyo float
