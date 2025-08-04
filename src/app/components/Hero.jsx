@@ -28,7 +28,7 @@ useGSAP(() => {
     {
       opacity: 1,
       y: 0,
-      duration: 0.5,
+      duration: 0.7,
       ease: "power4.out",  // ultra buttery
     }
   )
