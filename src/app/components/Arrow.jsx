@@ -51,7 +51,7 @@ const Arrow = () => {
         z: position[2],
         ease: "power4.out",
         duration: 0.5,
-        delay: 2,
+        delay: 2.5,
       }
     );
 
