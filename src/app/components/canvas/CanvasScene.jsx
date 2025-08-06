@@ -6,10 +6,10 @@ import * as THREE from 'three';
 import ReactModel from "../ReactModel";
 import Nodejs from "../Node";
 import Target from "../Target";
-import Arrow from "../Arrow";
 import CanvasLoader from "../CanvasLoader";
 
 import useResponsive from "@/app/hooks/useResponsive";
+import Cube from "../Cube";
 
 // Cursor-controlled light for dynamic illumination
 const CursorLight = () => {
@@ -67,8 +67,8 @@ const Computer = () => {
   const { isMobile, isTablet } = useResponsive();
 
 
-  const scale = isMobile ? [1.5, 1.5, 1.5]: [1.92, 1.92, 1.92];
-  const position = isMobile ? [-0.5, -2.5, -0.5]: [-0.8, -3.2, -0.9];
+  const scale = isMobile ? [1.6, 1.6, 1.6]: [1.92, 1.92, 1.92];
+  const position = isMobile ? [-0.5, -2.2, -0.5]: [-0.8, -3.2, -0.9];
 
   useEffect(() => {
   if (actions) {
@@ -122,8 +122,8 @@ const Computer = () => {
       />
        <spotLight position={[5, 10, 5]} angle={0.3} intensity={5} castShadow />
 
-       <mesh position={isMobile?[-1.2, -2.5, -1]:[-1.75, -3.2, -1.55]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
-        <circleGeometry args={isMobile?[2,64]:[2.5, 64]} />
+       <mesh position={isMobile?[-1.2, -2.2, -1]:[-1.75, -3.2, -1.55]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+        <circleGeometry args={isMobile?[1.5,64]:[2, 64]} />
         <meshStandardMaterial 
           color="#2b2529" // ✅ Set the color of the circle
           transparent={true}  // ✅ Enable transparency
@@ -167,7 +167,7 @@ const ComputerCanvas = () => {
         <ReactModel/>
         <Nodejs/>
         <Target/>
-        <Arrow/>
+        <Cube/>
         <CursorLight />
       </Suspense>
       {/* Preload assets */}

@@ -16,9 +16,9 @@ const Nodejs = () => {
   // Memoize responsive values
   const { scale, startPosition, finalPosition, elastic } = useMemo(() => {
     return {
-      scale: isMobile ? [1.0, 0.9, 1.0] : [1.5, 1.35, 1.4],
+      scale: isMobile ? [0.9, 0.8, 0.9] : [1.5, 1.35, 1.4],
       startPosition: isMobile ? [-9, -6, 4] : [-6, -6, 5],
-      finalPosition: isMobile ? [0, -1.5, 1.5] : [-1, -1.9, 2],
+      finalPosition: isMobile ? [-0.2, -1.5, 1.5] : [-1, -1.9, 2],
       elastic: isMobile ? [1, 1.1] : [1.2, 0.9],
     };
   }, [isMobile]);
@@ -37,7 +37,7 @@ const Nodejs = () => {
       z: finalPosition[2],
       duration: 3,
       ease: `elastic.out(${elastic[0]}, ${elastic[1]})`,
-      delay: 3.5,
+      delay: 4.2,
     });
 
     // Infinite rotation around Z axis

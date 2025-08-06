@@ -17,7 +17,7 @@ const ReactModel = () => {
   // Memoized responsive values
   const { scale, entryPosition, finalPosition, elastic } = useMemo(() => {
     return {
-      scale: isMobile ? [0.3, 0.3, 0.3] : [0.35, 0.35, 0.35],
+      scale: isMobile ? [0.27, 0.27, 0.27] : [0.35, 0.35, 0.35],
       entryPosition: isMobile ? { x: 3, y: 5, z: -2.5 } : { x: 5, y: 5, z: -3 },
       finalPosition: isMobile ? { x: -0.7, y: 1, z: -2.5 } : { x: 1, y: 0.8, z: -3 },
       elastic: isMobile ? [0.9, 0.6] : [1.2, 0.9],

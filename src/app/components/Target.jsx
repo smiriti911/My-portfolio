@@ -17,12 +17,12 @@ const Target = (props) => {
   // Memoized responsive values
   const { scale, entryPosition, finalPosition, yoyoDistance } = useMemo(() => {
     return {
-      scale: isMobile ? [0.45, 0.45, 0.45] : [0.55, 0.55, 0.55],
+      scale: isMobile ? [0.4, 0.4, 0.4] : [0.55, 0.55, 0.55],
       entryPosition: isMobile
         ? { x: 4, y: -5, z: -1.8 }
         : { x: 7, y: -9, z: -1.8 },
       finalPosition: isMobile
-        ? { x: 0.5, y: -2.5, z: -1.4 }
+        ? { x: 0.5, y: -2.2, z: -1.4 }
         : { x: 1.9, y: -3, z: -1.8 },
       yoyoDistance: isMobile ? 0.15 : 0.2,
     };
@@ -38,8 +38,8 @@ const Target = (props) => {
       entryPosition,
       {
         ...finalPosition,
-        duration: 0.5,
-        delay: 3,
+        duration: 0.7,
+        delay: 2.5,
         ease: "power4.out",
         onComplete: () => {
           // Continuous yoyo float
