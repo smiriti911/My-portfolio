@@ -38,7 +38,7 @@ const About = () => {
 
    const [copied, setCopied] = useState(false);
   const Email = {
-    name: "Smiriti Kapoor",
+    name: "Smiriti",
     email: "smiritikapoor911@gmail.com"
   }
 
@@ -149,7 +149,7 @@ border border-neutral-800 "
 {/* Get in Touch */}
       <div className=" p-4 rounded-2xl flex flex-col gap-6 bg-neutral-900/50 border-1 border-neutral-800">
         <h2   className={`text-transparent bg-clip-text bg-gradient-to-b mt-2 sm:mt-4 from-neutral-100 to-neutral-500 text-xl sm:text-2xl font-light tracking-wide ${redRose.className}`}>Get in Touch</h2>
-        <ul className="flex flex-col gap-2 sm:gap-4 md:gap-6 text-lg mt-2 sm:mt-4 md:mt-10">
+        <ul className="flex flex-col gap-4 md:gap-6 text-lg mt-4 sm:mt-4 md:mt-10">
           <li>
             <a
               href="https://www.linkedin.com/in/smiriti-kapoor011/"
@@ -159,7 +159,7 @@ border border-neutral-800 "
             >
               <div className="flex items-center gap-3">
                 <FaLinkedin className="text-2xl text-indigo-400" />
-                <span  className="text-neutral-200/80 text-lg sm:text-xl font-extralight tracking-wider">Smiriti Kapoor</span>
+                <span  className="text-neutral-200/80 text-lg sm:text-xl font-extralight tracking-wider">Smiriti</span>
               </div>
               <FiArrowUpRight className="text-xl opacity-70 group-hover:translate-x-1 transition" />
             </a>
