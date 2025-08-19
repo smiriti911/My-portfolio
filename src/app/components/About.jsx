@@ -89,7 +89,7 @@ useEffect(() => {
 
   return (
     <section className="max-w-7xl mx-auto min-h-screen  flex flex-col relative">
-      <div className="w-full mx-auto flex flex-col sm:my-36 my-25 sm:px-10 px-5 gap-3">
+      <div className="w-full mx-auto flex flex-col sm:my-30 my-25 sm:px-10 px-5 gap-3">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12 grids-container">
           <div
             className="flex items-end grid-1 rounded-2xl border-1 border-neutral-800 grid-fade"
@@ -194,7 +194,7 @@ border border-neutral-800 grid-fade"
               className="group flex items-center justify-between rounded-xl"
             >
               <div className="flex items-center gap-3">
-                <FaLinkedin className="text-2xl text-indigo-300" />
+                <FaLinkedin className="text-2xl text-blue-300" />
                 <span  className="text-neutral-200/80 text-lg sm:text-xl font-extralight tracking-wider">Smiriti</span>
               </div>
               <FiArrowUpRight className="text-xl opacity-70 group-hover:translate-x-1 transition" />
