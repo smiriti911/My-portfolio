@@ -19,7 +19,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(true);
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-3xl bg-neutral-950/70 ${redRose.className}`}
+      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-3xl bg-neutral-950/30 ${redRose.className}`}
     >
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center py-2 mx-auto sm:px-10 px-5">

@@ -5,7 +5,6 @@ import { Red_Rose } from 'next/font/google';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ComputerCanvas from "./canvas/CanvasScene";
-import { TypingAnimation } from '@/components/magicui/typing-animation';
 import useResponsive from "../hooks/useResponsive";
 
 const redRose = Red_Rose({
@@ -71,7 +70,7 @@ useGSAP(() => {
 
         <div ref={line2Ref} className="opacity-0">
           <p
-            className={`text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-700 text-xl sm:text-2xl font-semibold tracking-wide text-center ${redRose.className}`}
+            className={`text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-600 text-xl sm:text-2xl font-semibold tracking-wide text-center ${redRose.className}`}
           >
             Designing intuitive experiences
           </p>

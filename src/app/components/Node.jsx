@@ -17,7 +17,7 @@ const Nodejs = () => {
   const { scale, startPosition, finalPosition, elastic } = useMemo(() => {
     return {
       scale: isMobile ? [0.9, 0.8, 0.9] : [1.5, 1.35, 1.4],
-      startPosition: isMobile ? [-9, -6, 4] : [-6, -6, 5],
+      startPosition: isMobile ? [-4, -5, 4] : [-6, -6, 5],
       finalPosition: isMobile ? [-0.2, -1.5, 1.5] : [-1, -1.9, 2],
       elastic: isMobile ? [1, 1.1] : [1.2, 0.9],
     };
