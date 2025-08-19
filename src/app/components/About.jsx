@@ -148,7 +148,7 @@ border border-neutral-800 "
              <div className="grid grid-cols-2 gap-6 text-white h-full w-full ">
 {/* Get in Touch */}
       <div className=" p-4 rounded-2xl flex flex-col gap-6 bg-neutral-900/50 border-1 border-neutral-800">
-        <h2   className={`text-transparent bg-clip-text bg-gradient-to-b mt-4 from-neutral-100 to-neutral-500 text-xl sm:text-2xl font-light tracking-wide ${redRose.className}`}>Get in Touch</h2>
+        <h2   className={`text-transparent bg-clip-text bg-gradient-to-b mt-2 sm:mt-4 from-neutral-100 to-neutral-500 text-xl sm:text-2xl font-light tracking-wide ${redRose.className}`}>Get in Touch</h2>
         <ul className="flex flex-col gap-2 sm:gap-4 md:gap-6 text-lg mt-2 sm:mt-4 md:mt-10">
           <li>
             <a
@@ -206,7 +206,7 @@ border border-neutral-800 "
 
       {/* CV */}
       <div className="bg-neutral-900/50 p-4 rounded-2xl flex flex-col gap-6 border-1 border-neutral-800">
-       <h2   className={`text-transparent bg-clip-text bg-gradient-to-b mt-4 from-neutral-100 to-neutral-500 text-xl sm:text-2xl font-light tracking-wide ${redRose.className}`}>CV</h2>
+       <h2   className={`text-transparent bg-clip-text bg-gradient-to-b mt-2 sm:mt-4 from-neutral-100 to-neutral-500 text-xl sm:text-2xl font-light tracking-wide ${redRose.className}`}>CV</h2>
         <div className="flex flex-col gap-4 md:gap-6 text-lg mt-4 md:mt-15">
           <a
             href="/SmiritiResume.pdf"
