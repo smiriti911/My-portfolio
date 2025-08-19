@@ -57,7 +57,7 @@ useEffect(() => {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".grids-container", // parent wrapper
-        start: "top 40%", 
+        start: "top 70%", 
         toggleActions: "restart none none reset"           
       },
     });
