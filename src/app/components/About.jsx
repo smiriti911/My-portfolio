@@ -14,8 +14,13 @@ import {
   FaCheckCircle,
 } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
+import gsap from "gsap";
 
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 const redRose = Red_Rose({
   subsets: ["latin"],
@@ -48,12 +53,46 @@ const About = () => {
     setTimeout(() => setCopied(false),10000);
       };
 
+useEffect(() => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".grids-container", // parent wrapper
+        start: "top 40%", 
+        toggleActions: "restart none none reset"           
+      },
+    });
+
+    // grid-1: About Me from left
+    tl.fromTo(
+      ".grid-1",
+      { autoAlpha: 0, x: -100 },
+      { autoAlpha: 1, x: 0, duration: 1, ease: "power4.out", }
+    );
+
+    // grid-2: PNG from right
+    tl.fromTo(
+      ".grid-2",
+      { autoAlpha: 0, x: 100 },
+      { autoAlpha: 1, x: 0, duration: 1, ease: "power4.out",  },
+      "-=0.7" // slight overlap
+    );
+
+    // grid-3: Get in Touch + CV from bottom
+    tl.fromTo(
+      ".grid-3",
+      { autoAlpha: 0, y: 100 },
+      { autoAlpha: 1, y: 0, duration: 1, ease: "power4.out" ,},
+      "-=0.7"
+    );
+  }, []);
+
+
   return (
     <section className="max-w-7xl mx-auto min-h-screen  flex flex-col relative">
       <div className="w-full mx-auto flex flex-col sm:my-36 my-25 sm:px-10 px-5 gap-3">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12 grids-container">
           <div
-            className="flex items-end grid-1 rounded-2xl border-1 border-neutral-800"
+            className="flex items-end grid-1 rounded-2xl border-1 border-neutral-800 grid-fade"
     
           >
             <img
@@ -131,7 +170,7 @@ const About = () => {
 
           <div
             className="flex items-end grid-2 rounded-2xl 
-border border-neutral-800 "
+border border-neutral-800 grid-fade"
             style={{
               backgroundImage: "url('/grid.png')",
               backgroundSize: "cover",
@@ -155,7 +194,7 @@ border border-neutral-800 "
               className="group flex items-center justify-between rounded-xl"
             >
               <div className="flex items-center gap-3">
-                <FaLinkedin className="text-2xl text-indigo-400" />
+                <FaLinkedin className="text-2xl text-indigo-300" />
                 <span  className="text-neutral-200/80 text-lg sm:text-xl font-extralight tracking-wider">Smiriti</span>
               </div>
               <FiArrowUpRight className="text-xl opacity-70 group-hover:translate-x-1 transition" />
@@ -170,7 +209,7 @@ border border-neutral-800 "
               className="group flex items-center justify-between rounded-xl"
             >
               <div className="flex items-center gap-3">
-                <FaGithub className="text-2xl text-gray-300" />
+                <FaGithub className="text-2xl text-pink-200" />
                 <span  className="text-neutral-200/80 text-lg sm:text-xl font-extralight tracking-wider">smiriti911</span>
               </div>
               <FiArrowUpRight className="text-xl opacity-70 group-hover:translate-x-1 transition " />
@@ -182,7 +221,7 @@ border border-neutral-800 "
               <div className="flex items-center justify-between w-full group cursor-pointer">
   {/* Email with icon */}
   <div className="flex items-center gap-3">
-    <MdEmail className="text-2xl text-lime-300" />
+    <MdEmail className="text-2xl text-lime-200" />
     <span  className="text-neutral-200/80 text-lg sm:text-xl font-extralight tracking-wider">{Email.name}</span>
   </div>
 
@@ -204,22 +243,22 @@ border border-neutral-800 "
       {/* CV */}
       <div className="bg-neutral-900/50 p-4 rounded-2xl flex flex-col gap-6 border-1 border-neutral-800">
        <h2   className={`text-transparent bg-clip-text bg-gradient-to-b mt-2 sm:mt-4 from-neutral-100 to-neutral-500 text-xl sm:text-2xl font-light tracking-wide ${redRose.className}`}>CV</h2>
-        <div className="flex flex-col gap-4 md:gap-6 text-lg mt-4 md:mt-15">
+        <div className="flex flex-col gap-4 md:gap-6 text-lg mt-15 md:mt-22 group">
           <a
             href="/SmiritiResume.pdf"
             target="_blank"
-            className="px-4 py-2 rounded-xl border border-neutral-700 hover:bg-white/5 flex items-center justify-between transition font-extralight tracking-wider text-neutral-200/80"
+            className=" rounded-xl flex items-center justify-between transition font-extralight tracking-wider text-neutral-200/80 text-xl"
           >
             View
-            <FiArrowUpRight className="text-lg" />
+            <FiArrowUpRight className="text-xl group-hover:translate-x-1 transition" />
           </a>
           <a
             href="/SmiritiResume.pdf"
             download
-            className="px-4 py-2 rounded-xl border border-neutral-700 hover:bg-white/5 flex items-center justify-between transition font-extralight tracking-wider text-neutral-200/80"
+            className="rounded-xl flex items-center justify-between transition font-extralight tracking-wider text-neutral-200/80 text-xl"
           >
             Download
-            <FiArrowDown className="text-lg" />
+            <FiArrowDown className="text-xl group-hover:translate-x-1" />
           </a>
         </div>
       </div>
