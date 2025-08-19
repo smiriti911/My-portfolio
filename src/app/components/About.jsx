@@ -181,7 +181,7 @@ border border-neutral-800 grid-fade"
           <div
             className="flex items-end grid-3 rounded-2xl "
           >
-             <div className="grid grid-cols-2 gap-6 text-white h-full w-full ">
+             <div className="grid grid-cols-2 gap-4 text-white h-full w-full ">
 {/* Get in Touch */}
       <div className=" p-4 rounded-2xl flex flex-col gap-6 bg-neutral-900/50 border-1 border-neutral-800">
         <h2   className={`text-transparent bg-clip-text bg-gradient-to-b mt-2 sm:mt-4 from-neutral-100 to-neutral-500 text-xl sm:text-2xl font-light tracking-wide ${redRose.className}`}>Get in Touch</h2>
