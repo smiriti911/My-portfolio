@@ -51,21 +51,18 @@ const About = () => {
   return (
     <section className="max-w-7xl mx-auto min-h-screen  flex flex-col relative">
       <div className="w-full mx-auto flex flex-col sm:my-36 my-25 sm:px-10 px-5 gap-3">
-        {/* <h1  className={`text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-500 text-3xl sm:text-4xl font-semibold tracking-wide  ${redRose.className}`}>
-            About Me</h1> */}
-
         <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
           <div
             className="flex items-end grid-1 rounded-2xl border-1 border-neutral-800"
     
           >
             <img
-              src="/coding3.jpg"
+              src="/assets/spotlight3.png"
               alt="o"
               className="absolute z-[-1] h-full w-full"
             />
 
-            <div className=" p-4 flex flex-col w-full  bg-black/80 min-h-full justify-end">
+            <div className=" p-4 flex flex-col w-full  min-h-full justify-end">
               <div className="flex justify-between items-start w-full">
                 <div className="flex gap-4 items-center mb-4">
                   <Image
