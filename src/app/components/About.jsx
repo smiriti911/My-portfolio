@@ -80,21 +80,21 @@ const About = () => {
     tl.fromTo(
       ".grid-1",
       { autoAlpha: 0, x: -100 },
-      { autoAlpha: 1, x: 0, duration: 1, ease: "power4.out" }
+      { autoAlpha: 1, x: 0, duration: 0.5, ease: "power4.out" }
     );
 
     // grid-2: PNG from right
     tl.fromTo(
       ".grid-2",
       { autoAlpha: 0, x: 100 },
-      { autoAlpha: 1, x: 0, duration: 1, ease: "power4.out", delay: 0.5 }
+      { autoAlpha: 1, x: 0, duration: 0.5, ease: "power4.out", delay: 0.5 }
     );
 
     // grid-3: Get in Touch + CV from bottom
     tl.fromTo(
       ".grid-3",
       { autoAlpha: 0, y: 100 },
-      { autoAlpha: 1, y: 0, duration: 1, ease: "power4.out", delay: 0.5 }
+      { autoAlpha: 1, y: 0, duration: 0.5, ease: "power4.out", delay: 0.5 }
     );
   }, []);
 
