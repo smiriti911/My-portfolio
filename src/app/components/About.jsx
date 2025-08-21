@@ -21,26 +21,19 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { useMemo, useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import Card from "./Card";
-import { SiExpress, SiMongodb, SiTailwindcss,} from "react-icons/si";
+import { SiExpress, SiMongodb, SiTailwindcss } from "react-icons/si";
 
-import { DiJavascript1} from "react-icons/di";
+import { DiJavascript1 } from "react-icons/di";
 
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { VscAzure } from "react-icons/vsc";
 
-
 gsap.registerPlugin(ScrollTrigger);
-
 
 const redRose = Red_Rose({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
-
-
-
-
-
 
 const About = () => {
   const badges = useMemo(
@@ -98,9 +91,7 @@ const About = () => {
     );
   }, []);
 
-
   const boundsRef = useRef(null);
-
 
   return (
     <section className="max-w-7xl mx-auto min-h-screen  flex flex-col relative overflow-x-hidden">
@@ -191,49 +182,124 @@ border border-neutral-800 grid-fade"
               backgroundPosition: "center",
             }}
           >
-           <div className="flex flex-col items-start p-4 w-full h-full " ref={boundsRef}>
-<h2
+            <div
+              className="flex flex-col items-start p-4 w-full h-full "
+              ref={boundsRef}
+            >
+              <h2
                 className={`text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-500 text-2xl sm:text-3xl font-semibold tracking-wide mt-4 ${redRose.className}`}
               >
-              My Tool Box
-            </h2>
+                My Tool Box
+              </h2>
 
-{/* Text cards */}
-<Card className="absolute rotate-[10deg] top-[80%] left-[80%] sm:top-[79%] sm:left-[86%] md:top-[83%] md:left-[83%]" cardText="Frontend" bounds={boundsRef} />
+              {/* Text cards */}
+              <Card
+                className="absolute rotate-[10deg] top-[80%] left-[80%] sm:top-[79%] sm:left-[86%] md:top-[83%] md:left-[83%]"
+                cardText="Frontend"
+                bounds={boundsRef}
+              />
 
-<Card className="absolute rotate-[355deg] top-[80%] left-[63%] sm:top-[80%] sm:left-[73%] md:top-[83%] md:left-[68%]" cardText="Backend" bounds={boundsRef} />
+              <Card
+                className="absolute rotate-[355deg] top-[80%] left-[63%] sm:top-[80%] sm:left-[73%] md:top-[83%] md:left-[68%]"
+                cardText="Backend"
+                bounds={boundsRef}
+              />
 
-<Card className="absolute rotate-[0deg] top-[81%] left-[43%] sm:top-[81%] sm:left-[59%] md:top-[84%] md:left-[52%]" cardText="Database"  bounds={boundsRef}/>
+              <Card
+                className="absolute rotate-[0deg] top-[81%] left-[43%] sm:top-[81%] sm:left-[59%] md:top-[84%] md:left-[52%]"
+                cardText="Database"
+                bounds={boundsRef}
+              />
 
-<Card className="absolute rotate-[350deg] top-[60%] left-[70%] sm:top-[60%] sm:left-[79%] md:top-[65%] md:left-[76%]" cardText="Design"  bounds={boundsRef}/>
+              <Card
+                className="absolute rotate-[350deg] top-[60%] left-[70%] sm:top-[60%] sm:left-[79%] md:top-[65%] md:left-[76%]"
+                cardText="Design"
+                bounds={boundsRef}
+              />
 
-<Card className="absolute rotate-[340deg] top-[60%] left-[86%] sm:top-[58%] sm:left-[90%] md:top-[65%] md:left-[89%]" cardText="UI/UX"  bounds={boundsRef}/>
+              <Card
+                className="absolute rotate-[340deg] top-[60%] left-[86%] sm:top-[58%] sm:left-[90%] md:top-[65%] md:left-[89%]"
+                cardText="UI/UX"
+                bounds={boundsRef}
+              />
 
+              {/* Icon cards */}
+              <Card
+                className="absolute rotate-[0deg] top-[35%] left-[90%] sm:top-[33%] sm:left-[85%] md:top-[45%] md:left-[85%]"
+                icon={
+                  <FaReact className="text-blue-300 text-4xl sm:text-5xl" />
+                }
+                bounds={boundsRef}
+              />
 
+              <Card
+                className="absolute rotate-[0deg] top-[48%] left-[60%] sm:top-[53%] sm:left-[69%] md:top-[60%] md:left-[65%]"
+                icon={
+                  <FaNodeJs className="text-lime-400 text-4xl sm:text-5xl" />
+                }
+                bounds={boundsRef}
+              />
 
-{/* Icon cards */}
-<Card className="absolute rotate-[0deg] top-[35%] left-[90%] sm:top-[33%] sm:left-[85%] md:top-[45%] md:left-[85%]" icon={<FaReact className="text-blue-300 text-4xl sm:text-5xl"/>} bounds={boundsRef}/>
+              <Card
+                className="absolute rotate-[15deg] top-[58%] left-[38%] sm:top-[45%] sm:left-[51%] md:top-[55%] md:left-[44%]"
+                icon={
+                  <SiMongodb className="text-green-500 text-4xl sm:text-5xl" />
+                }
+                bounds={boundsRef}
+              />
 
-<Card className="absolute rotate-[0deg] top-[48%] left-[60%] sm:top-[53%] sm:left-[69%] md:top-[60%] md:left-[65%]" icon={<FaNodeJs className="text-lime-400 text-4xl sm:text-5xl"/>}bounds={boundsRef} />
+              <Card
+                className="absolute rotate-[345deg] top-[78%] left-[32%] sm:top-[72%] sm:left-[49%] md:top-[77%] md:left-[41%]"
+                icon={<FaGithub className="text-white text-4xl sm:text-5xl" />}
+                bounds={boundsRef}
+              />
 
-<Card className="absolute rotate-[15deg] top-[58%] left-[38%] sm:top-[45%] sm:left-[51%] md:top-[55%] md:left-[44%]" icon={<SiMongodb className="text-green-500 text-4xl sm:text-5xl"/>} bounds={boundsRef}/>
+              <Card
+                className="absolute rotate-[340deg] top-[58%] left-[50%] sm:top-[54%] sm:left-[60%] md:top-[60%] md:left-[55%]"
+                icon={<SiExpress className="text-white text-4xl sm:text-5xl" />}
+                bounds={boundsRef}
+              />
 
-<Card className="absolute rotate-[345deg] top-[78%] left-[32%] sm:top-[72%] sm:left-[49%] md:top-[77%] md:left-[41%]" icon={<FaGithub className="text-white text-4xl sm:text-5xl"/>} bounds={boundsRef}/>
+              <Card
+                className="absolute rotate-[20deg] top-[78%] left-[20%] sm:top-[72%] sm:left-[39%] md:top-[77%] md:left-[30%]"
+                icon={
+                  <FaGitAlt className="text-red-500 text-4xl sm:text-5xl" />
+                }
+                bounds={boundsRef}
+              />
 
-<Card className="absolute rotate-[340deg] top-[58%] left-[50%] sm:top-[54%] sm:left-[60%] md:top-[60%] md:left-[55%]" icon={<SiExpress className="text-white text-4xl sm:text-5xl"/>} bounds={boundsRef}/>
+              <Card
+                className="absolute rotate-[15deg] top-[78%] left-[8%] sm:top-[72%] sm:left-[29%] md:top-[77%] md:left-[19%]"
+                icon={
+                  <FaAws className="text-yellow-500 text-4xl sm:text-5xl" />
+                }
+                bounds={boundsRef}
+              />
 
-<Card className="absolute rotate-[20deg] top-[78%] left-[20%] sm:top-[72%] sm:left-[39%] md:top-[77%] md:left-[30%]" icon={<FaGitAlt className="text-red-500 text-4xl sm:text-5xl"/>} bounds={boundsRef}/>
+              <Card
+                className="absolute rotate-[25deg] top-[58%] left-[26%] sm:top-[49%] sm:left-[34%] md:top-[57%] md:left-[24%]"
+                icon={
+                  <VscAzure className="text-blue-500 text-4xl sm:text-5xl" />
+                }
+                bounds={boundsRef}
+              />
 
-<Card className="absolute rotate-[15deg] top-[78%] left-[8%] sm:top-[72%] sm:left-[29%] md:top-[77%] md:left-[19%]" icon={<FaAws className="text-yellow-500 text-4xl sm:text-5xl" />} bounds={boundsRef}/>
+              <Card
+                className="absolute rotate-[15deg] top-[38%] left-[44%] sm:top-[29%] sm:left-[64%] md:top-[39%] md:left-[60%]"
+                icon={
+                  <DiJavascript1 className="text-yellow-400 text-4xl sm:text-5xl rounded-full" />
+                }
+                bounds={boundsRef}
+              />
 
-<Card className="absolute rotate-[25deg] top-[58%] left-[26%] sm:top-[49%] sm:left-[34%] md:top-[57%] md:left-[24%]" icon={<VscAzure className="text-blue-500 text-4xl sm:text-5xl"/>} bounds={boundsRef}/>
-
-<Card className="absolute rotate-[15deg] top-[38%] left-[44%] sm:top-[29%] sm:left-[64%] md:top-[39%] md:left-[60%]" icon={<DiJavascript1 className="text-yellow-400 text-4xl sm:text-5xl rounded-full"/>} bounds={boundsRef}/>
-
-<Card className="absolute rotate-[340deg] top-[38%] left-[78%] sm:top-[30%] sm:left-[75%] md:top-[43%] md:left-[74%]" icon={<SiTailwindcss className="text-blue-400 text-4xl sm:text-5xl rounded-full"/>} bounds={boundsRef}/>
-
-           </div>
-           
+              <Card
+                className="absolute rotate-[340deg] top-[38%] left-[78%] sm:top-[30%] sm:left-[75%] md:top-[43%] md:left-[74%]"
+                icon={
+                  <SiTailwindcss className="text-blue-400 text-4xl sm:text-5xl rounded-full" />
+                }
+                bounds={boundsRef}
+              />
+            </div>
           </div>
 
           <div className="flex items-end grid-3 rounded-2xl ">

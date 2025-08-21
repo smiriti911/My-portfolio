@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { Red_Rose } from 'next/font/google';
+import { Red_Rose } from "next/font/google";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ComputerCanvas from "./canvas/CanvasScene";
@@ -18,42 +18,41 @@ const Hero = () => {
   const canvasRef = useRef(null);
   const { isMobile } = useResponsive();
 
-useGSAP(() => {
-  const tl = gsap.timeline();
+  useGSAP(() => {
+    const tl = gsap.timeline();
 
-  tl.fromTo(
-    line1Ref.current,
-    { opacity: 0, y: 0 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 0.7,
-      ease: "power4.out",  // ultra buttery
-    }
-  )
-    .fromTo(
-      line2Ref.current,
+    tl.fromTo(
+      line1Ref.current,
       { opacity: 0, y: 0 },
       {
         opacity: 1,
         y: 0,
-        duration: 0.5,
-        ease: "power4.out",  // matches buttery feel
-      },
-      "+=0.25"
+        duration: 0.7,
+        ease: "power4.out", // ultra buttery
+      }
     )
-    .fromTo(
-      canvasRef.current,
-      { opacity: 0 },
-      {
-        opacity: 1,
-        duration: 1,
-        ease: "power4.in",  // soft and calm
-      },
-      "+=0.25"
-    );
-}, []);
-
+      .fromTo(
+        line2Ref.current,
+        { opacity: 0, y: 0 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          ease: "power4.out", // matches buttery feel
+        },
+        "+=0.25"
+      )
+      .fromTo(
+        canvasRef.current,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          duration: 1,
+          ease: "power4.in", // soft and calm
+        },
+        "+=0.25"
+      );
+  }, []);
 
   return (
     <section
