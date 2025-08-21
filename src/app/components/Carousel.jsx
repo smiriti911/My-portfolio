@@ -55,7 +55,7 @@ const Carousel = () => {
 
 
   return (
-    <div className="relative w-full md:px-40 sm:px-10 px-5">
+    <div className="relative w-full md:px-40 sm:px-10 px-5 overflow-hidden">
       <div className="flex items-center gap-4 carousel-track">
         {slides.map((slide, index) => (
           <div
