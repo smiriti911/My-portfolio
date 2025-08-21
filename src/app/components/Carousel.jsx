@@ -60,7 +60,7 @@ const Carousel = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="slider-item w-[80vw] sm:w-[50vw] md:w-[30vw] h-[42vh] sm:h-[62vh] flex-none relative border border-neutral-800 rounded-lg overflow-hidden"
+            className="slider-item w-[80vw] sm:w-[50vw] md:w-[30vw] h-[42vh] sm:h-[62vh] flex-none relative border-2 border-neutral-800 rounded-lg overflow-hidden"
           >
             {/* Image */}
             <img

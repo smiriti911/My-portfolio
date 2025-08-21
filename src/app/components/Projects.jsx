@@ -58,7 +58,7 @@ const Projects = () => {
   return (
     <section
       ref={sectionRef}
-      className="mx-auto my-25 flex flex-col relative overflow-x-hidden"
+      className="mx-auto mb-25 flex flex-col relative overflow-x-hidden"
     >
       <div className="max-w-7xl w-full mx-auto flex flex-col sm:px-10 px-5 mb-10 gap-3">
         <h2
