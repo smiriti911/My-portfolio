@@ -95,7 +95,7 @@ const About = () => {
 
   return (
     <section className="max-w-7xl mx-auto min-h-screen  flex flex-col relative overflow-x-hidden">
-      <div className="w-full mx-auto flex flex-col sm:my-30 my-25 sm:px-10 px-5 gap-3">
+      <div className="w-full mx-auto flex flex-col sm:my-25 my-25 sm:px-10 px-5 gap-3">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12 grids-container">
           <div className="flex items-end grid-1 rounded-2xl border-1 border-neutral-800 grid-fade">
             <img
