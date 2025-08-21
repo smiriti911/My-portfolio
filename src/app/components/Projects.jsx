@@ -64,7 +64,7 @@ const Projects = () => {
         <h2
           className={`text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-500 text-2xl sm:text-3xl font-semibold tracking-wide ${redRose.className}`}
         >
-          Projects
+        Projects
         </h2>
       </div>
       <Carousel />
