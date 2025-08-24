@@ -58,11 +58,12 @@ const Projects = () => {
   return (
     <section
       ref={sectionRef}
-      className="mx-auto mb-25 flex flex-col relative overflow-x-hidden"
+      id="projects"
+      className="mx-auto my-15 flex flex-col relative overflow-x-hidden"
     >
-      <div className="max-w-7xl w-full mx-auto flex flex-col sm:px-10 px-5 mb-10 gap-3">
+      <div className="max-w-7xl w-full mx-auto flex flex-col sm:px-10 px-5 mb-15 gap-3">
         <h2
-          className={`text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-500 text-2xl sm:text-3xl font-semibold tracking-wide ${redRose.className}`}
+          className={`text-transparent bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-500 text-3xl sm:text-4xl font-semibold tracking-wide ${redRose.className}`}
         >
         Projects
         </h2>

@@ -87,7 +87,7 @@ const Carousel = () => {
                 <a
                   href={slide.link}
                   target="_blank"
-                  className="flex-shrink-0 bg-neutral-900/50 p-3 rounded-full hover:bg-neutral-900/80 transition duration-300 border border-neutral-800"
+                  className="flex-shrink-0 bg-neutral-900/50 p-3 rounded-full hover:bg-neutral-800/50 transition duration-300 border border-neutral-800 "
                 >
                   <FiArrowUpRight className="text-white text-2xl hover:-translate-y-0.5" />
                 </a>
@@ -101,13 +101,13 @@ const Carousel = () => {
       <div className="mt-10 flex items-center justify-center gap-5">
         <button
           onClick={prevSlide}
-          className="rounded-full cursor-pointer w-12 h-12 flex bg-neutral-900/50 border border-neutral-800 items-center justify-center"
+          className="rounded-full cursor-pointer w-12 h-12 flex bg-neutral-900/50 border border-neutral-800 items-center justify-center hover:bg-neutral-800/50 transition "
         >
           <IoIosArrowBack className="text-white text-2xl hover:-translate-x-1 transition" />
         </button>
         <button
           onClick={nextSlide}
-          className="rounded-full cursor-pointer w-12 h-12 flex bg-neutral-900/50 border border-neutral-800 items-center justify-center"
+          className="rounded-full cursor-pointer w-12 h-12 flex bg-neutral-900/50 border border-neutral-800 items-center justify-center hover:bg-neutral-800/50 transition "
         >
           <IoIosArrowForward className="text-white text-2xl hover:translate-x-1 transition" />
         </button>
