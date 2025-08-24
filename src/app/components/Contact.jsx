@@ -133,10 +133,10 @@ const Contact = () => {
 
         {/* Social Links */}
         <div className="flex  gap-6 mt-5 text-2xl text-neutral-400">
-          <a href="https://github.com/" target="_blank" className="hover:text-pink-200">
+          <a href="https://github.com/smiriti911" target="_blank" className="hover:text-pink-200">
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/" target="_blank" className="hover:text-blue-300">
+          <a href="https://www.linkedin.com/in/smiriti-kapoor011" target="_blank" className="hover:text-blue-300">
             <FaLinkedin />
           </a>
         </div>
