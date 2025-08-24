@@ -62,8 +62,7 @@ const Contact = () => {
   process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
   formRef.current,
   process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-)
-      .then(
+).then(
         (result) => {
           setLoading(false);
           setSuccess(true);
@@ -96,9 +95,9 @@ const Contact = () => {
         {/* Contact Card */}
         <div
           className="w-full border border-neutral-800/50 rounded-2xl shadow-xl backdrop-blur-md p-8 sm:p-10"
-          ref={formRef}
+          
         >
-          <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+          <form onSubmit={handleSubmit} ref={formRef}className="flex flex-col gap-6">
             <input
               type="text"
               name="name"
@@ -122,7 +121,7 @@ const Contact = () => {
             />
             <button
               type="submit"
-              className={`w-full py-4 rounded-xl bg-gradient-to-r from-neutral-800 to-neutral-900 text-neutral-200 tracking-wider ${redRose.className} hover:opacity-70 transition`}
+              className={`w-full py-4 rounded-xl bg-gradient-to-r from-neutral-800 to-neutral-900 text-neutral-200 tracking-wider ${redRose.className} hover:opacity-70 transition`} onClick={handleSubmit}
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
