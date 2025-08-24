@@ -78,7 +78,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="my-15 sm:my-25 flex flex-col items-center justify-start px-5 sm:px-10" id="contact">
+    <section className="my-20 sm:my-25 flex flex-col items-center justify-start px-5 sm:px-10" id="contact">
       <div className="max-w-2xl w-full flex flex-col gap-3">
         <h2
           ref={headingRef}
